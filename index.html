@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyle Lowell Pronto — Cloud Engineer</title>
+  <meta name="description" content="Kyle Lowell Pronto — Aspiring Cloud Engineer & Full-Stack Developer. AWS, Docker, Terraform, CI/CD, Spring Boot, React." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-brand">
+      <span class="nav-logo">☁</span>
+      <span class="nav-brand-text">kyle<span class="accent">.dev</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">01. Home</a></li>
+      <li><a href="#about" class="nav-link">02. About</a></li>
+      <li><a href="#skills" class="nav-link">03. Tech Stack</a></li>
+      <li><a href="#architecture" class="nav-link">04. Cloud Lab</a></li>
+      <li><a href="#projects" class="nav-link">05. Projects</a></li>
+      <li><a href="#education" class="nav-link">06. Education</a></li>
+      <li><a href="#contact" class="nav-link">07. Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="availability">
+          <span class="dot"></span> Available for cloud engineering internships
+        </div>
+        <p class="hello">Hello, I'm</p>
+        <h1 class="hero-name">Kyle Lowell <span class="accent-gradient">Pronto</span></h1>
+        <h2 class="hero-title">
+          <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-desc">
+          3rd-year BSIT student at the Polytechnic University of the Philippines — seeking a cloud engineering internship while building and automating cloud-native applications with <span class="hl">AWS</span>, <span class="hl">Docker</span>, <span class="hl">Terraform</span>, and <span class="hl">CI/CD pipelines</span>.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            View My Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get In Touch
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Cloud Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Years in IT</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">EN/PH</span>
+            <span class="stat-label">Bilingual</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <div class="photo-glow"></div>
+          <div class="photo-ring"></div>
+          <img src="images/kylepronto.jpg" alt="Kyle Lowell Pronto" id="profileImg" />
+          <div class="photo-badge">
+            <span>🚀</span>
+            <div>
+              <strong>Cloud Ready</strong>
+              <small>AWS · Docker · IaC</small>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card card-1">
+          <div class="card-icon">🟠</div>
+          <div>
+            <small>Provisioned with</small>
+            <strong>Terraform</strong>
+          </div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon">🐳</div>
+          <div>
+            <small>Containerized</small>
+            <strong>Docker + Compose</strong>
+          </div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon">⚡</div>
+          <div>
+            <small>Automated via</small>
+            <strong>GitHub Actions</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span>Scroll to explore</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            I'm <strong class="accent">Kyle</strong>, a 3rd-year BSIT student at PUP Calauan actively <strong>seeking a cloud engineering internship</strong>. I'm passionate about building resilient, automated, and cost-optimized infrastructure. I come from a full-stack background — writing APIs in <strong>Spring Boot</strong>, UIs in <strong>React</strong>, and wiring everything with databases — and now I love wrapping it all in <strong>Docker</strong>, describing it in <strong>Terraform</strong>, and shipping it through <strong>GitHub Actions</strong>.
+          </p>
+          <p>
+            I've used my coursework and side projects to get hands-on with the exact stack used in junior cloud roles: provisioning EC2s, S3 buckets and security groups on AWS, hardening Dockerfiles with multi-stage builds and non-root users, and running vulnerability scans with Trivy in CI.
+          </p>
+          <p>
+            When I'm not writing HCL or YAML, I'm troubleshooting a star-topology LAN in the school lab, contributing to group React prototypes, or exploring how to squeeze more performance out of a Spring Boot JAR on a tiny cloud VM. I communicate fluently in both <strong>English and Filipino</strong>.
+          </p>
+          <div class="about-tags">
+            <span class="tag">🗄️ Infrastructure as Code</span>
+            <span class="tag">🔁 CI/CD Pipelines</span>
+            <span class="tag">📦 Container Orchestration</span>
+            <span class="tag">🔒 Cloud Security</span>
+            <span class="tag">🌐 Networking</span>
+            <span class="tag">🛠️ Technical Writing</span>
+          </div>
+        </div>
+        <div class="about-side">
+          <div class="code-card">
+            <div class="code-bar">
+              <span class="code-dot r"></span>
+              <span class="code-dot y"></span>
+              <span class="code-dot g"></span>
+              <span class="code-file">kyle.tf</span>
+            </div>
+            <pre class="code"><code><span class="c-key">locals</span> {
+  <span class="c-var">profile</span> = {
+    <span class="c-prop">name</span>     = <span class="c-str">"Kyle Lowell Pronto"</span>
+    <span class="c-prop">role</span>     = <span class="c-str">"Cloud Engineer"</span>
+    <span class="c-prop">stack</span>    = [<span class="c-str">"AWS"</span>,<span class="c-str">"Docker"</span>,<span class="c-str">"Terraform"</span>]
+    <span class="c-prop">status</span>   = <span class="c-str">"Looking for internship"</span>
+    <span class="c-prop">languages</span>= [<span class="c-str">"Java"</span>,<span class="c-str">"C#"</span>,<span class="c-str">"JS"</span>]
+  }
+}
+
+<span class="c-key">output</span> <span class="c-str">"contact"</span> {
+  <span class="c-prop">value</span> = <span class="c-str">"prontokylelowell@gmail.com"</span>
+}</code></pre>
+          </div>
+          <div class="location-card">
+            <span class="loc-icon">📍</span>
+            <div>
+              <strong>Based in</strong>
+              <span>Calauan, Laguna, Philippines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Tools &amp; Technologies</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">A growing toolkit for building, shipping, and operating applications in the cloud.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">☁️</span>
+            <h3>Cloud &amp; DevOps</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">AWS (EC2, S3, SG)</div>
+            <div class="chip chip-level high">Docker</div>
+            <div class="chip chip-level high">Docker Compose</div>
+            <div class="chip chip-level high">Terraform (HCL)</div>
+            <div class="chip chip-level high">GitHub Actions (CI/CD)</div>
+            <div class="chip chip-level med">GitHub Container Registry</div>
+            <div class="chip chip-level med">Trivy</div>
+            <div class="chip chip-level med">Railway / Render</div>
+            <div class="chip chip-level med">YAML</div>
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">💻</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">Java</div>
+            <div class="chip chip-level high">C#</div>
+            <div class="chip chip-level high">JavaScript (Node.js)</div>
+            <div class="chip chip-level high">SQL</div>
+            <div class="chip chip-level high">HCL (Terraform)</div>
+            <div class="chip chip-level high">YAML</div>
+            <div class="chip chip-level med">HTML5</div>
+            <div class="chip chip-level med">CSS3</div>
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">🧩</span>
+            <h3>Frameworks &amp; APIs</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">Spring Boot</div>
+            <div class="chip chip-level high">Spring Security</div>
+            <div class="chip chip-level high">React</div>
+            <div class="chip chip-level med">Express</div>
+            <div class="chip chip-level med">Laravel</div>
+            <div class="chip chip-level med">.NET</div>
+            <div class="chip chip-level med">Maven</div>
+            <div class="chip chip-level high">REST API</div>
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">🗄️</span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">PostgreSQL</div>
+            <div class="chip chip-level high">MySQL</div>
+            <div class="chip chip-level med">Microsoft Access</div>
+            <div class="chip chip-level high">2NF / 3NF Normalization</div>
+            <div class="chip chip-level med">SQLite</div>
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">🌐</span>
+            <h3>Networking</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">Star Topology LAN Setup</div>
+            <div class="chip chip-level high">Static IP Addressing</div>
+            <div class="chip chip-level med">Switch Troubleshooting</div>
+          </div>
+        </div>
+
+        <div class="skill-column">
+          <div class="skill-col-head">
+            <span class="skill-icon">🛠️</span>
+            <h3>Tools &amp; Soft Skills</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="chip chip-level high">Git</div>
+            <div class="chip chip-level high">GitHub</div>
+            <div class="chip chip-level high">Jest</div>
+            <div class="chip chip-level med">Adobe XD</div>
+            <div class="chip chip-level high">MS Office (Word, Excel, PP)</div>
+            <div class="chip chip-level high">Teamwork</div>
+            <div class="chip chip-level high">Problem Solving</div>
+            <div class="chip chip-level high">Technical Writing</div>
+            <div class="chip chip-level high">Bilingual (EN / PH)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE / CLOUD MINI-LAB -->
+  <section id="architecture" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Cloud Architecture Lab</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Follow a request through a 3-tier AWS VPC — click any node to see its role in the deployment.</p>
+      </div>
+
+      <div class="arch-note">
+        <span>🔍</span>
+        ILLUSTRATIVE ARCHITECTURE · No real AWS resources are provisioned
+      </div>
+
+      <div class="arch-wrapper">
+        <div class="arch-route-scroll">
+          <div class="arch-route" id="archRoute">
+            <!-- Route steps -->
+            <button class="arch-node" data-step="0">
+              <span class="node-num">1</span>
+              <div class="node-body">
+                <span class="node-icon">👤</span>
+                <span class="node-title">User / Client</span>
+                <span class="node-sub">HTTPS Request</span>
+              </div>
+            </button>
+            <div class="arch-arrow">→</div>
+            <button class="arch-node" data-step="1">
+              <span class="node-num">2</span>
+              <div class="node-body">
+                <span class="node-icon">🛡️</span>
+                <span class="node-title">CloudFront / WAF</span>
+                <span class="node-sub">CDN + Firewall</span>
+              </div>
+            </button>
+            <div class="arch-arrow">→</div>
+            <button class="arch-node" data-step="2">
+              <span class="node-num">3</span>
+              <div class="node-body">
+                <span class="node-icon">🌐</span>
+                <span class="node-title">Route 53 / ALB</span>
+                <span class="node-sub">DNS + Load Balancer</span>
+              </div>
+            </button>
+            <div class="arch-arrow">→</div>
+            <button class="arch-node" data-step="3">
+              <span class="node-num">4</span>
+              <div class="node-body">
+                <span class="node-icon">🧱</span>
+                <span class="node-title">EC2 Auto Scaling</span>
+                <span class="node-sub">App Tier (Docker)</span>
+              </div>
+            </button>
+            <div class="arch-arrow">→</div>
+            <button class="arch-node" data-step="4">
+              <span class="node-num">5</span>
+              <div class="node-body">
+                <span class="node-icon">💾</span>
+                <span class="node-title">RDS + S3</span>
+                <span class="node-sub">Database + Objects</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="arch-actions">
+          <button class="btn btn-sm btn-outline" id="traceBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Trace Request
+          </button>
+          <button class="btn btn-sm btn-ghost" id="resetTrace">Reset</button>
+        </div>
+
+        <div class="arch-desc" id="archDesc">
+          <div class="arch-desc-head">
+            <span class="arch-desc-icon" id="descIcon">👤</span>
+            <div>
+              <strong id="descTitle">Client Computer</strong>
+              <span id="descSub">Initiates an HTTPS request</span>
+            </div>
+          </div>
+          <p id="descBody">
+            A user (for example, on a laptop or mobile phone) makes an HTTPS request to the application — like logging in, fetching a list of Pokémon, or saving a booking. This request travels across the public internet towards our cloud infrastructure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">End-to-end work across DevOps, IaC, containerization, and full-stack development.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Featured 1 -->
+        <article class="project project-featured">
+          <div class="project-badge">★ CI/CD Featured</div>
+          <div class="project-head">
+            <h3>CI/CD Pipeline with GitHub Actions</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-tags">
+            <span>Node.js</span><span>Express</span><span>Jest</span><span>Docker</span>
+            <span>GitHub Actions</span><span>GHCR</span><span>Trivy</span><span>SSH Deploy</span>
+          </div>
+          <p class="project-desc">
+            An automated, production-style pipeline that runs unit tests with Jest, scans the Docker image for CVEs with Trivy, builds the image, pushes it to GitHub Container Registry, and deploys over SSH to a target server.
+          </p>
+          <ul class="project-points">
+            <li>Test → Vuln Scan → Build → Push → Deploy stages</li>
+            <li>Multi-stage Docker image pushed to GHCR</li>
+            <li>SSH-based deploy with secret management via GitHub Secrets</li>
+          </ul>
+          <a class="project-link" href="https://github.com/prontokylelowell-ui/CI-CD-pipeline-with-GitHub-Actions" target="_blank" rel="noopener">
+            View Repository
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </article>
+
+        <!-- Featured 2 -->
+        <article class="project project-featured">
+          <div class="project-badge">★ IaC Featured</div>
+          <div class="project-head">
+            <h3>Infrastructure as Code with Terraform</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-tags">
+            <span>Terraform (HCL)</span><span>AWS EC2</span><span>AWS S3</span>
+            <span>Security Groups</span><span>Variables &amp; Outputs</span><span>Tags</span>
+          </div>
+          <p class="project-desc">
+            Reusable Terraform module that provisions an EC2 web server behind a security group, plus a versioned and server-side-encrypted S3 bucket — all defined from variables, outputs, and consistent resource tagging.
+          </p>
+          <ul class="project-points">
+            <li>EC2 with ingress/egress security group rules</li>
+            <li>S3 bucket with versioning + SSE enabled</li>
+            <li>Variables.tf / outputs.tf for reusable configurations</li>
+          </ul>
+          <a class="project-link" href="https://github.com/prontokylelowell-ui/Infrastructure_as_Code_with_Terraform" target="_blank" rel="noopener">
+            View Repository
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </article>
+
+        <!-- Featured 3 -->
+        <article class="project project-featured">
+          <div class="project-badge">★ Containers Featured</div>
+          <div class="project-head">
+            <h3>Dockerized Spring Boot App on Cloud VM</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-tags">
+            <span>Java</span><span>Spring Boot</span><span>Maven</span><span>Docker</span>
+            <span>Docker Compose</span><span>Cloud VM</span>
+          </div>
+          <p class="project-desc">
+            Hardened, multi-stage Docker build for a Spring Boot REST API — compiles in one stage, runs as a non-root user in a slim JRE image, ships with a health check, and is ready to docker-compose up on any cloud VM.
+          </p>
+          <ul class="project-points">
+            <li>Multi-stage build keeps image size small</li>
+            <li>Runs under a non-root user for least privilege</li>
+            <li>Docker Compose file for one-command deploy</li>
+          </ul>
+          <a class="project-link" href="https://github.com/prontokylelowell-ui/Dockerized-Spring-Boot-app-on-a-cloud-VM" target="_blank" rel="noopener">
+            View Repository
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </article>
+
+        <!-- Other project 4 -->
+        <article class="project">
+          <div class="project-head">
+            <h3>Pokédex Web Application</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-tags">
+            <span>Java</span><span>Spring Boot</span><span>Spring Security</span>
+            <span>MySQL</span><span>Docker Compose</span>
+          </div>
+          <p class="project-desc">
+            Full-stack Pokédex covering all 1,025 Pokémon with animated sprites, authenticated login via Spring Security, and a Team Builder feature. Packaged alongside MySQL with Docker Compose.
+          </p>
+        </article>
+
+        <!-- Other project 5 -->
+        <article class="project">
+          <div class="project-head">
+            <h3>Camping Management System</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-tags">
+            <span>React</span><span>Group Project (Group 8)</span><span>UI Prototype</span>
+          </div>
+          <p class="project-desc">
+            Co-developed a booking system proposal and an interactive React prototype for Word of Life Camp — handling amenities, dates, and user flows.
+          </p>
+        </article>
+
+        <!-- GitHub CTA -->
+        <article class="project project-cta">
+          <div class="github-icon">🐙</div>
+          <h3>More on GitHub</h3>
+          <p>Explore all my repositories, coursework, and ongoing experiments.</p>
+          <a class="btn btn-primary" href="https://github.com/prontokylelowell-ui" target="_blank" rel="noopener">
+            Visit GitHub Profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Education &amp; Academic Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-main">
+          <div class="edu-card">
+            <div class="edu-period">3rd Year — Present</div>
+            <div class="edu-icon">🎓</div>
+            <h3>B.S. in Information Technology</h3>
+            <div class="edu-school">Polytechnic University of the Philippines — Calauan Campus</div>
+            <p class="edu-note">Focus: Cloud Infrastructure, DevOps, Software Engineering, Database Design, Networking.</p>
+          </div>
+        </div>
+
+        <div class="edu-side">
+          <div class="acad-item">
+            <div class="acad-head">
+              <span class="acad-icon">🧪</span>
+              <h4>Database &amp; .NET Coursework</h4>
+            </div>
+            <p class="acad-place">PUP Calauan</p>
+            <ul>
+              <li>Completed C# lab activities with PostgreSQL CRUD operations and .NET + Docker setups.</li>
+              <li>Applied database normalization (2NF / 3NF) to coursework schemas.</li>
+            </ul>
+          </div>
+
+          <div class="acad-item">
+            <div class="acad-head">
+              <span class="acad-icon">🔌</span>
+              <h4>Computer Lab Network Setup</h4>
+            </div>
+            <p class="acad-place">PUP Calauan</p>
+            <ul>
+              <li>Set up a star-topology computer lab network.</li>
+              <li>Resolved static IP addressing and switch-level connectivity issues.</li>
+            </ul>
+          </div>
+
+          <div class="acad-item">
+            <div class="acad-head">
+              <span class="acad-icon">🎯</span>
+              <h4>BSIT Summer Camp 2026</h4>
+            </div>
+            <p class="acad-place">Seminar &amp; Training · PUP Calauan</p>
+            <ul>
+              <li><em>Empowering Students Through Web Development Skills</em>.</li>
+              <li>Covered semantic HTML, CSS, JavaScript, and Laravel.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Let's Build Something in the Cloud</h2>
+        <div class="section-line center"></div>
+        <p class="section-sub">
+          Open to internships, cloud-related collaborations, or just a good conversation about IaC and containers.
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <a class="contact-card" href="mailto:prontokylelowell@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <small>Email</small>
+            <strong>prontokylelowell@gmail.com</strong>
+          </div>
+        </a>
+        <a class="contact-card" href="tel:+639362102491">
+          <span class="contact-icon">📱</span>
+          <div>
+            <small>Phone</small>
+            <strong>+63 936 210 2491</strong>
+          </div>
+        </a>
+        <a class="contact-card" href="https://github.com/prontokylelowell-ui" target="_blank" rel="noopener">
+          <span class="contact-icon">🐙</span>
+          <div>
+            <small>GitHub</small>
+            <strong>github.com/prontokylelowell-ui</strong>
+          </div>
+        </a>
+        <a class="contact-card" href="https://www.facebook.com/kylelowell.pronto/" target="_blank" rel="noopener">
+          <span class="contact-icon">👤</span>
+          <div>
+            <small>Facebook</small>
+            <strong>Kyle Lowell Pronto</strong>
+          </div>
+        </a>
+        <a class="contact-card" href="https://www.instagram.com/poyy2x/" target="_blank" rel="noopener">
+          <span class="contact-icon">📸</span>
+          <div>
+            <small>Instagram</small>
+            <strong>@poyy2x</strong>
+          </div>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <p>Designed &amp; built with ☁️ by Kyle Lowell Pronto · Laguna, Philippines</p>
+        <p class="footer-mini">Stack: Vanilla HTML · CSS · JavaScript</p>
+      </footer>
+    </div>
+  </section>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
