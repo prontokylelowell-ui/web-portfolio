@@ -113,37 +113,53 @@
   revealTargets.forEach((t) => revealObserver.observe(t));
 
   /* ---------- Cloud Architecture lab ---------- */
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  function buildSvg(d) {
+    const el = document.createElementNS(SVG_NS, 'svg');
+    el.setAttribute('viewBox', '0 0 24 24');
+    el.setAttribute('fill', 'none');
+    el.setAttribute('stroke', 'currentColor');
+    el.setAttribute('stroke-width', '2');
+    el.setAttribute('stroke-linecap', 'round');
+    el.setAttribute('stroke-linejoin', 'round');
+    el.innerHTML = d;
+    return el;
+  }
+  // icon descriptors (path-only)
+  const archIcons = [
+    '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+    '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+    '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+    '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>'
+  ];
+
   const archData = [
     {
-      icon: '👤',
       title: 'User / Client',
       sub: 'Initiates HTTPS request',
       body:
         'A user on a laptop, phone, or desktop makes an HTTPS request to the application — e.g. logging in, browsing a Pokédex, or submitting a booking. The request travels over the public internet toward the AWS edge.'
     },
     {
-      icon: '🛡️',
       title: 'CDN + WAF (CloudFront + AWS WAF)',
       sub: 'Global edge + firewall layer',
       body:
         'Requests first hit CloudFront edge locations for cached content (cutting latency) and pass through a Web Application Firewall that drops common exploits — SQLi, XSS, bad bots — before they ever reach the VPC.'
     },
     {
-      icon: '🌐',
       title: 'ALB + Route 53',
       sub: 'DNS and load balancing tier',
       body:
         'Route 53 resolves the domain, then an Application Load Balancer in public subnets routes traffic across healthy EC2 instances in the Auto Scaling group across multiple Availability Zones for redundancy.'
     },
     {
-      icon: '🧱',
       title: 'EC2 Auto Scaling (App Tier)',
       sub: 'Dockerized Spring Boot / Node APIs',
       body:
         'Application servers run in private subnets behind the ALB — containers built with multi-stage Dockerfiles, running as non-root users, launched from Golden AMIs by an Auto Scaling group that scales on CPU or request rate.'
     },
     {
-      icon: '💾',
       title: 'RDS + S3 + Secrets',
       sub: 'Persistence and object storage',
       body:
@@ -164,11 +180,13 @@
     if (!node) return;
     node.classList.add('active');
     const d = archData[i];
+    const iconSvg = buildSvg(archIcons[i]);
     if (animate && archDesc) {
       archDesc.style.transition = 'opacity .2s ease';
       archDesc.style.opacity = '0';
       setTimeout(() => {
-        descIcon.textContent = d.icon;
+        descIcon.textContent = '';
+        descIcon.appendChild(iconSvg);
         descTitle.textContent = d.title;
         descSub.textContent = d.sub;
         descBody.textContent = d.body;
@@ -176,7 +194,8 @@
         archDesc.style.opacity = '1';
       }, 220);
     } else {
-      descIcon.textContent = d.icon;
+      descIcon.textContent = '';
+      descIcon.appendChild(iconSvg);
       descTitle.textContent = d.title;
       descSub.textContent = d.sub;
       descBody.textContent = d.body;
