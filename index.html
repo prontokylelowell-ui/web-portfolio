@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#070c1a" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Kyle Lowell Pronto — Aspiring Cloud Engineer</title>
-  <meta name="description" content="Kyle Lowell Pronto — Aspiring Cloud Engineer & Full-Stack Developer. AWS, Docker, Terraform, CI/CD, Spring Boot, React." />
+  <meta name="description" content="Kyle Lowell Pronto — Aspiring Cloud Engineer & Full-Stack Developer. AWS, Docker, Terraform, CI/CD, Spring Boot, React. BSIT student at PUP seeking cloud engineering internships." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kyle Lowell Pronto — Aspiring Cloud Engineer" />
+  <meta property="og:description" content="Cloud & DevOps portfolio: AWS, Docker, Terraform, CI/CD pipelines, Spring Boot, React. 3rd-year BSIT seeking internships." />
+  <meta property="og:image" content="images/kylepronto.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>" />
@@ -87,7 +97,7 @@
         <div class="photo-frame">
           <div class="photo-glow"></div>
           <div class="photo-ring"></div>
-          <img src="images/kylepronto.jpg" alt="Kyle Lowell Pronto" id="profileImg" />
+          <img src="images/kylepronto.jpg" alt="Headshot of Kyle Lowell Pronto, aspiring cloud engineer and BSIT student at PUP, smiling outdoors" id="profileImg" width="380" height="475" loading="eager" decoding="async" fetchpriority="high" />
           <div class="photo-badge">
             <span>🚀</span>
             <div>
@@ -393,6 +403,19 @@
         <!-- Featured 1 -->
         <article class="project project-featured">
           <div class="project-badge">★ CI/CD Featured</div>
+          <div class="project-media">
+            <div class="project-media-placeholder">
+              <div class="pm-icon">🚀</div>
+              <div class="pm-title">Pipeline Dashboard</div>
+              <div class="pm-sub">Screenshots of passing runs live in the README</div>
+              <div class="pm-bar">
+                <div class="pm-bar-dot g"></div><span>Tests</span>
+                <div class="pm-bar-dot g"></div><span>Scan</span>
+                <div class="pm-bar-dot g"></div><span>Build</span>
+                <div class="pm-bar-dot g"></div><span>Deploy</span>
+              </div>
+            </div>
+          </div>
           <div class="project-head">
             <h3>CI/CD Pipeline with GitHub Actions</h3>
             <span class="project-year">2026</span>
@@ -412,15 +435,30 @@
           <p class="project-proof">
             <strong>Proof:</strong> Passing GitHub Actions run screenshots + full Trivy scan output in the repo README.
           </p>
-          <a class="project-link" href="https://github.com/prontokylelowell-ui/CI-CD-pipeline-with-GitHub-Actions" target="_blank" rel="noopener">
-            Read README &amp; View Repo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="project-actions">
+            <a class="btn btn-sm btn-outline project-action" href="https://github.com/prontokylelowell-ui/CI-CD-pipeline-with-GitHub-Actions#readme" target="_blank" rel="noopener">
+              📖 Read README
+            </a>
+            <a class="btn btn-sm btn-primary project-action" href="https://github.com/prontokylelowell-ui/CI-CD-pipeline-with-GitHub-Actions" target="_blank" rel="noopener">
+              🐙 View Repo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
         </article>
 
         <!-- Featured 2 -->
         <article class="project project-featured">
           <div class="project-badge">★ IaC Featured</div>
+          <div class="project-media">
+            <div class="project-media-placeholder">
+              <div class="pm-icon">🏗️</div>
+              <div class="pm-title">AWS Architecture</div>
+              <div class="pm-sub">Terraform plan output &amp; resource graph in README</div>
+              <div class="pm-icons">
+                <span>🖥️ EC2</span><span>🪣 S3</span><span>🔒 SG</span>
+              </div>
+            </div>
+          </div>
           <div class="project-head">
             <h3>Infrastructure as Code with Terraform</h3>
             <span class="project-year">2026</span>
@@ -440,15 +478,32 @@
           <p class="project-proof">
             <strong>Proof:</strong> Clean <code>terraform plan</code> output, resource graph, and cost estimate documented in the README.
           </p>
-          <a class="project-link" href="https://github.com/prontokylelowell-ui/Infrastructure_as_Code_with_Terraform" target="_blank" rel="noopener">
-            Read README &amp; View Repo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="project-actions">
+            <a class="btn btn-sm btn-outline project-action" href="https://github.com/prontokylelowell-ui/Infrastructure_as_Code_with_Terraform#readme" target="_blank" rel="noopener">
+              📖 Read README
+            </a>
+            <a class="btn btn-sm btn-primary project-action" href="https://github.com/prontokylelowell-ui/Infrastructure_as_Code_with_Terraform" target="_blank" rel="noopener">
+              🐙 View Repo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
         </article>
 
         <!-- Featured 3 -->
         <article class="project project-featured">
           <div class="project-badge">★ Containers Featured</div>
+          <div class="project-media">
+            <div class="project-media-placeholder">
+              <div class="pm-icon">🐳</div>
+              <div class="pm-title">Container Layers</div>
+              <div class="pm-sub">Multi-stage build · Non-root · Healthcheck</div>
+              <div class="pm-layers">
+                <div class="pm-layer l-slim">JRE Slim (run)</div>
+                <div class="pm-layer l-app">Spring Boot JAR</div>
+                <div class="pm-layer l-build">Maven Build (discarded)</div>
+              </div>
+            </div>
+          </div>
           <div class="project-head">
             <h3>Dockerized Spring Boot App on Cloud VM</h3>
             <span class="project-year">2026</span>
@@ -468,10 +523,15 @@
           <p class="project-proof">
             <strong>Proof:</strong> <code>docker inspect</code> user output, healthcheck log, and image size comparison in the README.
           </p>
-          <a class="project-link" href="https://github.com/prontokylelowell-ui/Dockerized-Spring-Boot-app-on-a-cloud-VM" target="_blank" rel="noopener">
-            Read README &amp; View Repo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="project-actions">
+            <a class="btn btn-sm btn-outline project-action" href="https://github.com/prontokylelowell-ui/Dockerized-Spring-Boot-app-on-a-cloud-VM#readme" target="_blank" rel="noopener">
+              📖 Read README
+            </a>
+            <a class="btn btn-sm btn-primary project-action" href="https://github.com/prontokylelowell-ui/Dockerized-Spring-Boot-app-on-a-cloud-VM" target="_blank" rel="noopener">
+              🐙 View Repo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
         </article>
 
         <!-- Other project 4 -->
